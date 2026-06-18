@@ -279,7 +279,8 @@ function App() {
     // 2. Outlet Score
     if (user.outlet_preference === "REQUIRED") {
       if (cafe.outlet_status === "ALL") outletScore = 100;
-      else if (cafe.outlet_status === "PARTIAL" ? outletScore = 50 : outletScore = 0);
+      else if (cafe.outlet_status === "PARTIAL") outletScore = 50;
+      else outletScore = 0;
     } else {
       outletScore = 100; // Not required, always satisfied
     }
